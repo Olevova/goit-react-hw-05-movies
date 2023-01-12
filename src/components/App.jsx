@@ -6,7 +6,7 @@ import { FilmSearch } from 'pages/FilmSearch';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import * as React from 'react';
-import { Actors } from './Actors/actors';
+import { Actors } from './Actors/Actors';
 import { Reviews } from './Reviews/Reviews';
 
 const MovieDetail = lazy(() =>

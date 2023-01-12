@@ -18,8 +18,8 @@ export const MovieDetail = () => {
 
   return (
     <>
-      <Outlet />
       <Film film={one} />
+      <Outlet />
     </>
   );
 };
