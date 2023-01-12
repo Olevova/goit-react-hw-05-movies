@@ -1,8 +1,27 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import * as React from 'react';
+import styled from 'styled-components';
+
+const NavHedear = styled(NavLink)`
+  display: inline;
+  border-radius: 5px;
+  color: white;
+  margin: 5px;
+  text-decoration: none;
+  padding: 5px;
+
+  &.active {
+    background-color: #04923d;
+  }
+  :hover:not(.active) {
+    background-color: #3cb371;
+  }
+`;
 
 const menu = [
   {
-    href: 'Home',
+    href: '/',
     tex: 'HOME',
   },
   {
@@ -13,12 +32,12 @@ const menu = [
 
 export const Header = () => {
   return (
-    <div>
+    <Box sx={{ bgcolor: '#136b4d', height: '100%', padding: 1 }}>
       {menu.map(({ href, tex }) => (
-        <Link to={href} key={tex}>
+        <NavHedear to={href} key={tex}>
           {tex}
-        </Link>
+        </NavHedear>
       ))}
-    </div>
+    </Box>
   );
 };
