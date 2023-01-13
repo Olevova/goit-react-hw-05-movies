@@ -1,0 +1,13 @@
+.liDiv {
+  display: grid;
+  gap: 20px;
+
+  /* ! */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.liBlock {
+  list-style: none;
+  color: rgb(18, 19, 20);
+  width: 150px;
+}

@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { NavLink, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Img from '../../image/flag.jpg';
+import css from './Film.module.css';
 
 export const Film = ({ film }) => {
   const {
@@ -30,8 +31,10 @@ export const Film = ({ film }) => {
       maxWidth="lg"
       style={{ display: 'flex', flexDirection: 'row', marginTop: 10 }}
     >
-      <NavLink to={location.state?.from ?? '/Film'}>Back</NavLink>
-      <Card sx={{ maxWidth: 345 }}>
+      <NavLink className={css.liFilm} to={location.state?.from ?? '/Film'}>
+        Back
+      </NavLink>
+      <Card sx={{ maxWidth: 345, maxHeight: 700 }}>
         <CardMedia
           sx={{ height: 400 }}
           image={
@@ -56,10 +59,10 @@ export const Film = ({ film }) => {
         </CardContent>
       </Card>
       <ul>
-        <li>
+        <li className={css.liFilm}>
           <NavLink to="cast"> Cast</NavLink>
         </li>
-        <li>
+        <li className={css.liFilm}>
           <NavLink to="reviews">Reviews</NavLink>
         </li>
       </ul>

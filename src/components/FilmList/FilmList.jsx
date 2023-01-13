@@ -16,16 +16,22 @@ const NavLinkFilms = styled(NavLink)`
 
 export const FilmList = ({ films }) => {
   const location = useLocation();
-  return films.map(({ original_title, original_name, id }) => (
-    <NavLinkFilms
-      style={{ height: '30px' }}
-      key={id}
-      to={`/Film/${id}`}
-      state={{ from: location }}
-    >
-      {original_title ? original_title : original_name}
-    </NavLinkFilms>
-  ));
+  return (
+    <>
+      <h1 style={{ color: '#2e7d32' }}> TOP OF WEEK</h1>
+      {films.map(({ original_title, original_name, id }) => (
+        <NavLinkFilms
+          style={{ height: '30px' }}
+          key={id}
+          to={`/Film/${id}`}
+          state={{ from: location }}
+        >
+          {original_title ? original_title : original_name}
+        </NavLinkFilms>
+      ))}
+      ;
+    </>
+  );
 };
 
 FilmList.propTypes = {
