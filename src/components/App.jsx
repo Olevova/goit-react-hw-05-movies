@@ -1,7 +1,6 @@
 import { lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { SharedLayout } from './SharedLayout/SharedLayout ';
-import { Films } from 'pages/Films';
 import { FilmSearch } from 'pages/FilmSearch';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
@@ -13,6 +12,13 @@ const MovieDetail = lazy(() =>
   import('../pages/MovieDetails').then(module => ({
     ...module,
     default: module.MovieDetail,
+  }))
+);
+
+const Films = lazy(() =>
+  import('../pages/Films').then(module => ({
+    ...module,
+    default: module.Films,
   }))
 );
 
@@ -45,7 +51,7 @@ export const App = () => {
                 />
               </Route>
             </Route>
-            <Route path="*" element={<SharedLayout />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Container>
       </React.Fragment>
