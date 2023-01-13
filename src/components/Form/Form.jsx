@@ -11,7 +11,6 @@ export const Form = ({ onSubmit }) => {
 
   const onChangeSearch = e => {
     setSearch(e.currentTarget.value.toLowerCase());
-    console.log(search);
   };
 
   const onHandel = e => {

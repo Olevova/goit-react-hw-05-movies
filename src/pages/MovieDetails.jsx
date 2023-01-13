@@ -19,7 +19,6 @@ export const MovieDetail = () => {
   useEffect(() => {
     async function film(id) {
       const res = await oneFilm(id);
-      console.log(res.data, id);
       setOne(res.data);
     }
     film(id);

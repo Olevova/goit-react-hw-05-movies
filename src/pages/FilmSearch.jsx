@@ -14,9 +14,7 @@ export const FilmSearch = () => {
   const filmsForSearch = searchFilm.get('findfilm') ?? '';
 
   const onSubmit = search => {
-    console.log(search);
     setSearch(search !== '' ? { findfilm: search } : {});
-    console.log(searchFilm);
   };
 
   useEffect(() => {
@@ -26,7 +24,6 @@ export const FilmSearch = () => {
       );
       console.log(filmsSearchArray, 15, filmsForSearch);
       if (filmsSearchArray.length < 2) {
-        console.log('aga');
         return toast('Фільму з такою назвою не знайдено', {
           position: 'top-left',
           autoClose: 5000,
@@ -41,7 +38,6 @@ export const FilmSearch = () => {
       setFilmsearch(filmsSearchArray);
     }
     if (filmsForSearch !== '') {
-      console.log(searchFilm);
       filmList();
       return;
     }

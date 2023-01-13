@@ -9,7 +9,6 @@ export const Reviews = () => {
   useEffect(() => {
     async function OfFilm(id) {
       const res = await reviewsFilm(id);
-      console.log(res);
       setReviews(res.data.results);
     }
     OfFilm(id);

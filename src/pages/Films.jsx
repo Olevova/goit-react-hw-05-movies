@@ -12,7 +12,6 @@ export const Films = () => {
   async function Day() {
     const films = await filmResp().then(data => data.data.results);
     setFilm(films);
-    // console.log(film);
   }
 
   useEffect(() => {

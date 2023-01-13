@@ -10,7 +10,6 @@ export const Actors = () => {
   useEffect(() => {
     async function actorsOfFilm(id) {
       const res = await actorsFilm(id);
-      console.log(res);
       setActors(res.data.cast);
     }
     actorsOfFilm(id);
@@ -34,6 +33,7 @@ export const Actors = () => {
                 </li>
               );
             }
+            return null;
           })
         ) : (
           <p> 'No information'</p>
