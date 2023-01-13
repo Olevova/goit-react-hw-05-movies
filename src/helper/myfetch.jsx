@@ -12,10 +12,11 @@ export async function filmResp() {
   }
 }
 
-export async function filmSearchReq() {
+export async function filmSearchReq(film) {
   try {
     const filmReq = await axios(
-      `https://api.themoviedb.org/3/trending/all/day?api_key=f68134e3023166cb9cb0f095aa9e1cfe`
+      `https://api.themoviedb.org/3/search/movie?api_key=f68134e3023166cb9cb0f095aa9e1cfe&language=en-US&page=1&include_adult=false&query=${film}
+`
     );
     return filmReq;
   } catch (error) {

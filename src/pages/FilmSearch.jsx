@@ -69,7 +69,7 @@ export const FilmSearch = () => {
           <FilmList films={filmSearch} />
         ) : (
           <h3 style={{ color: '#3cb371', display: 'block', padding: 0 }}>
-            Введіть назву фільму{' '}
+            Insert Film Name{' '}
           </h3>
         )}
       </Container>
