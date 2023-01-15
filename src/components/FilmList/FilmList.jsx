@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const NavLinkFilms = styled(NavLink)`
+const NavLinkFilms = styled(Link)`
   color: #66cdaa;
   text-decoration: none;
   display: flex;
@@ -29,7 +29,6 @@ export const FilmList = ({ films }) => {
           {original_title ? original_title : original_name}
         </NavLinkFilms>
       ))}
-      ;
     </>
   );
 };

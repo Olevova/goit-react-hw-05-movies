@@ -22,7 +22,7 @@ export const FilmSearch = () => {
       const filmsSearchArray = await filmSearchReq(filmsForSearch).then(
         data => data.data.results
       );
-      console.log(filmsSearchArray, 15, filmsForSearch);
+      console.log(filmsSearchArray, 15, filmsForSearch, searchFilm);
       if (filmsSearchArray.length < 2) {
         return toast('Фільму з такою назвою не знайдено', {
           position: 'top-left',

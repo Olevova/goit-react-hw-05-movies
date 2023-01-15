@@ -24,7 +24,7 @@ export const Film = ({ film }) => {
     ? genres.map(({ name }) => name).join(', ')
     : 'No information';
 
-  console.log(location);
+  console.log(location, 'its location');
 
   return (
     <Container
@@ -60,10 +60,18 @@ export const Film = ({ film }) => {
       </Card>
       <ul>
         <li className={css.liFilm}>
-          <NavLink to="cast"> Cast</NavLink>
+          <NavLink to="cast" state={{ from: location.state?.from ?? '/Film' }}>
+            {' '}
+            Cast
+          </NavLink>
         </li>
         <li className={css.liFilm}>
-          <NavLink to="reviews">Reviews</NavLink>
+          <NavLink
+            to="reviews"
+            state={{ from: location.state?.from ?? '/Film' }}
+          >
+            Reviews
+          </NavLink>
         </li>
       </ul>
     </Container>
